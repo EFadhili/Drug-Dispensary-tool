@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Sign Up</title>
+</head>
+<body>
+  <input type="checkbox" id="show">
+  <label for="show" class="show-btn">Get Started</label>
+
+  <div class="container">
+    <h2>Sign Up</h2>
+    <form method="POST" action="signup.php">
+      <div class="form-group">
+        <label for="signup-username">Username:</label>
+        <input type="text" id="signup-username" name="signup-username" required>
+      </div>
+      <div class="form-group">
+        <label for="signup-email">Email:</label>
+        <input type="email" id="signup-email" name="signup-email" required>
+      </div>
+      <div class="form-group">
+        <label for="signup-password">Password:</label>
+        <input type="password" id="signup-password" name="signup-password" required>
+      </div>
+      <div class="form-group">
+        <label for="signup-role">Role:</label>
+        <select id="signup-role" name="signup-role">
+          <option value="Patient">Patient</option>
+          <option value="Doctor">Doctor</option>
+          <option value="Pharmacist">Pharmacist</option>
+          <option value="Admin">Admin</option>
+        </select>
+      </div class="signup-link">
+      <input type="submit" value="Sign Up">
+    </form>
+    <div class="login-link">
+      Already have an account? <a href="login.html">Log in</a>
+    </div>
+  </div>
+</body>
+</html>

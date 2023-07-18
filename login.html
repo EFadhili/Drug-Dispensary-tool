@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Login</title>
+</head>
+<body>
+  <input type="checkbox" id="show">
+  <label for="show" class="show-btn">Login Form</label>
+
+  <div class="container">
+    <label for="show" class="close-btn" title="close"></label>
+    <h1>Welcome</h1>
+    <form method="POST" action="login.php">
+      <div class="form-group">
+        <label for="login-email">Email:</label>
+        <input type="email" id="login-email" name="login-email" required>
+      </div>
+      <div class="form-group">
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" name="login-password" required>
+      </div>
+      <input type="submit" value="Login">
+    </form>
+    <div class="signup-link">
+      Not a menber? <a href="signup.html">Signup here</a>
+    </div>
+  </div>
+</body>
+</html>
