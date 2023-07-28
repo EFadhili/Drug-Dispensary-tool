@@ -1,0 +1,73 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #273676, #9a9fe8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    width: 350px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    text-align: left;
+  }
+
+  .container h1 {
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    display: block;
+    color: rgb(17, 16, 16);
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="email"] {
+    display: block;
+    width: 90%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(60, 50, 50);
+    padding: 10px;
+    color: rgb(9, 9, 9);
+    font-size: medium;
+  }
+
+  .form-group input[type="submit"] {
+    background-color: #534caf;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .form-group select {
+    display: block;
+    width: 90%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(60, 50, 50);
+    padding: 10px;
+    color: rgb(9, 9, 9);
+    font-size: medium;
+  }
+  
+  .form-group select option {
+    background-color: #7b799d;
+    color: rgb(9, 9, 9);
+    font-size: medium;
+  }

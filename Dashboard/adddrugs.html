@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Add Drugs</title>
+  <link rel="stylesheet" href="prescription.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  
+  <script>
+    // Function to add a new row for prescription
+    function addRow() {
+      var prescriptionTable = document.getElementById("prescription-table").getElementsByTagName('tbody')[0];
+      var newRow = prescriptionTable.insertRow();
+
+      var cell1 = newRow.insertCell();
+      var cell2 = newRow.insertCell();
+      var cell3 = newRow.insertCell();
+      var cell4 = newRow.insertCell();
+      var cell5 = newRow.insertCell();      
+
+      cell1.innerHTML = '<input type="text" name="drug_name[]" required>';
+      cell2.innerHTML = '<input type="number" name="unit_quantity[]" required>';      
+      cell3.innerHTML = '<select name="units[]"><option value="Tablets">Tablets</option><option value="Mg">Mg</option><option value="ml">ml</option><option value="Injections">Injections</option></select>';
+      cell4.innerHTML = '<input type="number" name="unit_price[]" required>';
+      cell5.innerHTML = '<span class="remove-row" onclick="removeRow(this)">-</span>';
+    }
+
+    // Function to remove a row from prescription
+    function removeRow(row) {
+      var prescriptionTable = document.getElementById("prescription-table");
+      var rowIndex = row.parentNode.parentNode.rowIndex;
+      prescriptionTable.deleteRow(rowIndex);
+    }
+  </script>
+</head>
+<body>
+  <form method="POST" action="adddrugs.php">
+    <div class="history_lists">
+      <div class="list1">
+        <div class="row">
+          <h1>Add Drugs Form</h1>
+        </div>
+        <table id="prescription-table">
+          <thead>
+            <tr>
+              <th>Drug Name</th>
+              <th>Unit Quantity</th>
+              <th>Units</th>
+              <th>Unit Price(KSH)</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="row">
+              <td><input type="text" name="drug_name[]" required></td>
+              <td><input type="number" name="unit_quantity[]" required></td>              
+              <td>
+                <select name="units[]">
+                    <option value="mg">mg</option>
+                    <option value="tablets">tablets</option>
+                    <option value="ml">ml</option>
+                    <option value="injections">injections</option>
+                </select>
+              </td>
+              <td><input type="number" name="unit_price[]" required></td>
+              <td><span class="remove-row" onclick="removeRow(this)">-</span></td>              
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <input type="button" value="+" onclick="addRow()">
+    <input type="submit" value="Add Drugs" onclick="return confirm('Are you sure you are done Adding drugs?');">
+  </form>
+</body>
+</html>
